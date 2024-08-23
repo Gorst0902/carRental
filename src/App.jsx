@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react';
-import Navbar from './components/Navbar/Navbar/Navbar';
+import Navbar from './components/Navbar/Navbar';
+import Hero from './components/Hero/Hero';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import About from './components/About/About';
 
 const App = () => {
   //Dark mode feature
@@ -16,13 +20,25 @@ const App = () => {
       element.classList.remove("dark");
       localStorage.setItem("theme", "light")
     }
-  }, [theme])
+  }, [theme]);
+
+  useEffect(() => {
+    Aos.init({
+      offset: 200,
+      duration: 600,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
+    Aos.refresh();
+  }, []);
 
   return (
     <div>
       <Navbar theme={theme} setTheme={setTheme} />
+      <Hero theme={theme} />
+      <About />
     </div>
   )
 }
 
-export default App
+export default App;
