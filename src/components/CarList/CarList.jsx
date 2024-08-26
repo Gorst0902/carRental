@@ -29,7 +29,7 @@ const carList = [
 
 const CarList = () => {
     return (
-        <div className='pb-24 pt-12 bg-white dark:bg-dark dark:text-white'>
+        <div className='pb-12 pt-12 bg-white dark:bg-dark dark:text-white'>
             <div className="container">
                 <h1
                     data-aos="fade-up"
@@ -73,8 +73,9 @@ const CarList = () => {
                     }
                 </div>
 
-                <div className='grid place-content-center my-8' >
+                <div className='grid place-content-center my-8 min-h-[80px]'>
                     <button
+                        data-aos="fade-up"
                         className='button-outline'
                     >
                         Get started
