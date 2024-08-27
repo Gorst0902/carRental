@@ -14,7 +14,7 @@ const Hero = ({ theme }) => {
           >
             <img
               src={
-                theme == "dark" ?
+                theme === "dark" ?
                   carPng : yellowCarPng
               }
               alt=""
@@ -24,7 +24,6 @@ const Hero = ({ theme }) => {
           <div className='order-2 sm:order-1 space-y-5 sm:pr-32'>
             <p
               data-aos="fade-up"
-              // data-aos-delay="600"
               className='text-primary text-2xl font-serif'
             >
               Effortless
